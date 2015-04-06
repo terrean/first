@@ -26,7 +26,31 @@ ContactManager.Views.ContactForm = Backbone.View.extend({
     });
 	
   },
-
+    /**
+  saveProducts: function() {
+	  var Product = Parse.Object.extend("Product");
+	  var product = new Product();
+	  
+	  var name = this.$('.contact-name-input').val();
+      var price = this.$('.contact-price-input').val();
+      var unit = this.$('.contact-unit-input').val();
+      var description = this.$('.contact-description-input').val();
+	  
+	  product.set("name", name);
+	  product.set("price", price);
+	  product.set("unit", unit);
+	  product.set("description", description);
+	  
+	  product.save(null, {
+		  success: function() {
+			  console.log("saved!");
+		  },
+		  error: function() {
+			  console.log(error.message);
+		  }
+	  })
+  };**/
+  
     // Logs out the user and shows the login view
     logOut: function(e) {
       Parse.User.logOut();
